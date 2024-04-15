@@ -15,9 +15,7 @@ from activity_list A
          inner join activity_type on A.ref_activity_type = activity_type.id
          inner join activity_source on A.ref_activity_source = activity_source.id
          inner join activity_source_class on activity_source.ref_source_class = activity_source_class.id
-order by date desc;
+order by date desc, A.id desc;
 
 select *
 from v_activity_list;
-
-select * from activity_source_class;
